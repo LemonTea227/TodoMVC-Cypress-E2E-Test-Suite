@@ -7,9 +7,9 @@
     }
   },
   "args": {
-    "todoName": "WeCheck Home Assignment",
+    "todoName": "Buy groceries",
     "secondTodoName": "Just Do It!!!",
     "genericTodoName": "todo",
-    "editedTodoName": "edited Cypress Assignment"
+    "editedTodoName": "Buy groceries today"
   }
 }
