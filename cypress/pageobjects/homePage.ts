@@ -69,10 +69,6 @@ class HomePage {
     return this.lists.todosList.getAllChildrenText();
   }
 
-  getAlltodosText(): Cypress.Chainable<string[]> {
-    return this.getAllTodosText();
-  }
-
   getTodoByText(text: string): Cypress.Chainable<JQuery<HTMLElement>> {
     return this.lists.todosList.getChildByText(text);
   }
@@ -120,15 +116,17 @@ class HomePage {
   }
 
   changeNameOfATodoByName(currentName: string, newName: string): void {
-    this.getTodoByText(currentName).dblclick();
-    const editInput = new Input(selectors.inputs.editInput.selector);
+    const todoItem = this.getTodoByText(currentName);
+    todoItem.dblclick();
+    const editInput = new Input(todoItem.find(selectors.inputs.editInput.selector));
     editInput.type(newName, { release: false });
     editInput.enter();
   }
 
   changeNameOfATodoByIndex(index = 0, newName: string): void {
-    this.getTodoByIndex(index).dblclick();
-    const editInput = new Input(selectors.inputs.editInput.selector);
+    const todoItem = this.getTodoByIndex(index);
+    todoItem.dblclick();
+    const editInput = new Input(todoItem.find(selectors.inputs.editInput.selector));
     editInput.type(newName, { release: false });
     editInput.enter();
   }

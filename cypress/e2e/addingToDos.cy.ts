@@ -11,7 +11,7 @@ describe('Todo creation', () => {
 
   it('adds a single todo', () => {
     homePage.addTodo(homePage.data.args.todoName);
-    homePage.inputs.newTodo.getElement().should('have.text', '');
+    homePage.inputs.newTodo.getElement().should('have.value', '');
     homePage.getTodoByText(homePage.data.args.todoName).should('be.visible');
   });
 
@@ -23,7 +23,7 @@ describe('Todo creation', () => {
 
     todoItems.forEach((todo) => homePage.addTodo(todo));
 
-    homePage.inputs.newTodo.getElement().should('have.text', '');
+    homePage.inputs.newTodo.getElement().should('have.value', '');
 
     todoItems.forEach((todo) => homePage.getTodoByText(todo).should('be.visible'));
   });
