@@ -10,7 +10,7 @@ describe('Todo editing', () => {
 
   it('edits todo text', () => {
     homePage.addTodo(homePage.data.args.todoName);
-    homePage.inputs.newTodo.getElement().should('have.text', '');
+    homePage.inputs.newTodo.getElement().should('have.value', '');
     homePage.getTodoByText(homePage.data.args.todoName).should('be.visible');
 
     homePage.changeNameOfATodoByName(

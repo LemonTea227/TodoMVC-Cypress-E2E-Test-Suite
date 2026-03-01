@@ -11,7 +11,7 @@ describe('Todo completion', () => {
 
   it('marks and unmarks a single todo', () => {
     homePage.addTodo(homePage.data.args.todoName);
-    homePage.inputs.newTodo.getElement().should('have.text', '');
+    homePage.inputs.newTodo.getElement().should('have.value', '');
     homePage.getTodoByText(homePage.data.args.todoName).should('be.visible');
 
     homePage.checkTodoByText(homePage.data.args.todoName);

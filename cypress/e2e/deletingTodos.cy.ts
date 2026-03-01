@@ -11,7 +11,7 @@ describe('Todo deletion', () => {
 
   it('deletes a single todo', () => {
     homePage.addTodo(homePage.data.args.todoName);
-    homePage.inputs.newTodo.getElement().should('have.text', '');
+    homePage.inputs.newTodo.getElement().should('have.value', '');
     homePage.getTodoByText(homePage.data.args.todoName).should('be.visible');
 
     homePage.deleteTodoByText(homePage.data.args.todoName);
