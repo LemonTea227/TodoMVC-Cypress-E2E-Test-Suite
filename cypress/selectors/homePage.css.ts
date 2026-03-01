@@ -1,4 +1,4 @@
-module.exports = {
+const selectors = {
   labels: {
     mainLabel: { selector: 'h1' },
     clearCompleted: { selector: '.clear-completed' },
@@ -20,9 +20,11 @@ module.exports = {
     completedToggle: { selector: '[data-testid="todo-item-toggle"]' },
   },
   lists: {
-    todosList: { 
-        listSelector: '[data-testid="todo-list"]',
-        childSelector: 'li[data-testid="todo-item"]' 
+    todosList: {
+      listSelector: '[data-testid="todo-list"]',
+      childSelector: 'li[data-testid="todo-item"]',
     },
   },
-};
+} as const;
+
+export default selectors;

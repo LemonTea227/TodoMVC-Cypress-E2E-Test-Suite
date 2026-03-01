@@ -1,15 +1,38 @@
-Hi, my name is Tavor Naydits, and this is my home assignment for the Cypress Automation position.
-I took this assignment seriously, and I hope it shows.
-I would love to hear from you, and would also love to get your feedback on my work to know can i improve it.
+TodoMVC Cypress E2E Test Suite
 
-# Instructions
-* make sure you have npm and git, if not install them in their official Site
-* clone the repository to your local computer
-* make sure you run the following commands in the terminal ```npm init``` and ```npm install```
+This project contains end-to-end tests for the React-Redux TodoMVC application using Cypress and TypeScript.
 
-now you should be all set to run the tests!
+## Prerequisites
 
-## Testing
-* if you want to run all the tests, just run the following commands in the terminal ```npx cypress run``` - this will make all the tests run in a headless environment
-* if you run the tests though cypress web server you can run the the following commands in the terminal ```npx cypress open``` and navigate there to the desired specs and run them with a full web view of the runtime.
+- Node.js 18+
+- npm 9+
+
+## Setup
+
+1. Clone this repository.
+2. Install dependencies:
+
+   npm install
+
+## Run tests
+
+- Run all tests headlessly:
+
+	npm test
+
+- Open Cypress interactive runner:
+
+	npm run cy:open
+
+- Run TypeScript checks:
+
+	npm run typecheck
+
+## Project structure
+
+- `cypress/e2e` – test specs
+- `cypress/pageobjects` – page object abstractions
+- `cypress/elementObjects` – reusable element wrappers
+- `cypress/selectors` – page selectors
+- `cypress/fixtures` – test data
 
