@@ -5,6 +5,7 @@ export default defineConfig({
   screenshotOnRunFailure: false,
   allowCypressEnv: false,
   e2e: {
+    supportFile: false,
     experimentalModifyObstructiveThirdPartyCode: true,
     baseUrl: 'https://todomvc.com/examples/react-redux/dist/#/',
     setupNodeEvents() {
